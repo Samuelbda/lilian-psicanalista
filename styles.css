@@ -371,79 +371,40 @@ h1, h2, h3, h4 {
   letter-spacing: 1px;
 }
 
-.hero-image-wrapper {
+.hero-video-wrapper {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
-.hero-img-backdrop {
+.hero-video-backdrop {
   position: absolute;
   width: 100%;
   height: 100%;
-  max-width: 420px;
-  max-height: 520px;
+  max-width: 520px;
   background-color: var(--clr-bg-secondary);
   border-radius: var(--radius-md);
-  transform: rotate(-3deg);
+  transform: rotate(-2.5deg);
   z-index: 1;
   border: 1px solid rgba(197, 168, 128, 0.2);
 }
 
-.hero-img-container {
+.hero-video-container {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-premium);
-  aspect-ratio: 3/4;
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-smooth);
-}
-
-.hero-img-container:hover .hero-img {
-  transform: scale(1.03);
-}
-
-/* 7. SEÇÃO DE VÍDEO DE APRESENTAÇÃO */
-.video-presentation {
-  background-color: var(--clr-bg-secondary);
-  overflow: hidden;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.video-player-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.video-player-container {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
   background-color: #000;
   aspect-ratio: 16/9;
-  width: 100%;
 }
 
-.video-player-container video {
+.hero-video-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -451,9 +412,9 @@ h1, h2, h3, h4 {
   transition: var(--transition-smooth);
 }
 
-.video-player-container:hover {
-  box-shadow: var(--shadow-premium);
-  transform: translateY(-4px);
+.hero-video-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 35px 70px -15px rgba(30, 30, 30, 0.15);
 }
 
 .video-play-label {
@@ -465,20 +426,78 @@ h1, h2, h3, h4 {
   color: var(--clr-text-light);
   font-weight: 400;
   letter-spacing: 0.5px;
+  position: relative;
+  z-index: 2;
 }
 
 .video-play-label svg {
   color: var(--clr-secondary-dark);
 }
 
-.video-text-content {
+/* 7. SEÇÃO CONHEÇA A LILIAN (APRESENTAÇÃO) */
+.about-lilian {
+  background-color: var(--clr-bg-secondary);
+  overflow: hidden;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 420px;
+  max-height: 520px;
+  background-color: var(--clr-bg-white);
+  border-radius: var(--radius-md);
+  transform: rotate(-3deg);
+  z-index: 1;
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.about-img-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  aspect-ratio: 3/4;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.about-img-container:hover .about-img {
+  transform: scale(1.03);
+}
+
+.about-text-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
 }
 
-.video-text-badge {
+.about-text-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -491,13 +510,13 @@ h1, h2, h3, h4 {
   color: var(--clr-primary);
 }
 
-.video-text-content h3 {
+.about-text-content h3 {
   font-size: 2rem;
   color: var(--clr-primary);
   line-height: 1.3;
 }
 
-.video-text-content p {
+.about-text-content p {
   font-size: 1.05rem;
   color: var(--clr-text-muted);
   font-weight: 300;
@@ -1326,16 +1345,12 @@ h1, h2, h3, h4 {
     gap: 1.5rem;
   }
   
-  .video-grid {
+  .about-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
   }
   
-  .video-player-container {
-    max-height: 500px;
-  }
-  
-  .video-text-content h3 {
+  .about-text-content h3 {
     font-size: 1.75rem;
   }
 }
@@ -1378,26 +1393,26 @@ h1, h2, h3, h4 {
   .hero-badge-trust {
     justify-content: center;
   }
+
+  .hero-video-container {
+    max-width: 100%;
+  }
   
   .gallery-grid {
     grid-template-columns: 1fr;
   }
   
-  .video-grid {
+  .about-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
   
-  .video-player-container {
-    max-height: 550px;
-  }
-  
-  .video-text-content {
+  .about-text-content {
     align-items: center;
     text-align: center;
   }
   
-  .video-text-content .btn {
+  .about-text-content .btn {
     width: 100%;
   }
   
@@ -1476,11 +1491,11 @@ h1, h2, h3, h4 {
     padding: 2.5rem 1.5rem;
   }
   
-  .video-player-container {
-    max-height: 480px;
+  .about-img-container {
+    max-width: 100%;
   }
   
-  .video-text-content h3 {
+  .about-text-content h3 {
     font-size: 1.5rem;
   }
   
