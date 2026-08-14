@@ -413,135 +413,9 @@ h1, h2, h3, h4 {
   transform: scale(1.03);
 }
 
-/* 7. BENEFÍCIOS SECTION */
-.benefits {
-  background-color: var(--clr-bg-secondary);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.benefit-card {
-  background-color: var(--clr-bg-white);
-  padding: 3rem 2rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-smooth);
-  border: 1px solid rgba(46, 59, 50, 0.02);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.benefit-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(197, 168, 128, 0.3);
-}
-
-.benefit-icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: var(--clr-bg-secondary);
-  color: var(--clr-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  transition: var(--transition-smooth);
-}
-
-.benefit-card:hover .benefit-icon {
-  background-color: var(--clr-primary);
-  color: var(--clr-bg-primary);
-  transform: rotate(360deg);
-}
-
-.benefit-card h3 {
-  font-size: 1.4rem;
-  color: var(--clr-primary);
-  margin-bottom: 1rem;
-}
-
-.benefit-card p {
-  color: var(--clr-text-muted);
-  font-size: 0.95rem;
-  font-weight: 300;
-}
-
-/* 8. GALERIA SECTION */
-.gallery {
-  background-color: var(--clr-bg-primary);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 2.5rem;
-  margin-top: 3.5rem;
-}
-
-.gallery-main-image {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 16/10;
-}
-
-.gallery-main-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-smooth);
-}
-
-.gallery-main-image:hover img {
-  transform: scale(1.02);
-}
-
-.gallery-content-box {
-  background-color: var(--clr-bg-secondary);
-  padding: 3.5rem 3rem;
-  border-radius: var(--radius-md);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(197, 168, 128, 0.2);
-}
-
-.gallery-content-box h3 {
-  font-size: 2.2rem;
-  color: var(--clr-primary);
-  margin-bottom: 1.25rem;
-}
-
-.gallery-content-box p {
-  font-size: 1.05rem;
-  color: var(--clr-text-muted);
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
-.gallery-quote {
-  font-style: italic;
-  color: var(--clr-primary-light);
-  border-left: 2px solid var(--clr-secondary);
-  padding-left: 1.25rem;
-  margin-top: auto;
-  font-size: 0.95rem;
-}
-
-/* ---- SEÇÃO DE VÍDEO DE APRESENTAÇÃO ---- */
+/* 7. SEÇÃO DE VÍDEO DE APRESENTAÇÃO */
 .video-presentation {
-  background-color: var(--clr-bg-primary);
+  background-color: var(--clr-bg-secondary);
   overflow: hidden;
 }
 
@@ -608,7 +482,7 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--clr-bg-secondary);
+  background-color: var(--clr-bg-white);
   border: 1px solid rgba(197, 168, 128, 0.3);
   padding: 0.5rem 1.25rem;
   border-radius: var(--radius-pill);
@@ -630,9 +504,135 @@ h1, h2, h3, h4 {
   line-height: 1.75;
 }
 
-/* 9. DETALHES E DIFERENCIAIS SECTION */
-.details {
+/* 8. BENEFÍCIOS SECTION */
+.benefits {
+  background-color: var(--clr-bg-primary);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.benefit-card {
+  background-color: var(--clr-bg-white);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(46, 59, 50, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(197, 168, 128, 0.3);
+}
+
+.benefit-icon {
+  width: 3.5rem;
+  height: 3.5rem;
   background-color: var(--clr-bg-secondary);
+  color: var(--clr-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  transition: var(--transition-smooth);
+}
+
+.benefit-card:hover .benefit-icon {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg-primary);
+  transform: rotate(360deg);
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  color: var(--clr-primary);
+  margin-bottom: 1rem;
+}
+
+.benefit-card p {
+  color: var(--clr-text-muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+/* 9. GALERIA SECTION */
+.gallery {
+  background-color: var(--clr-bg-secondary);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.gallery-main-image {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 16/10;
+}
+
+.gallery-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.gallery-main-image:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-content-box {
+  background-color: var(--clr-bg-white);
+  padding: 3.5rem 3rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.gallery-content-box h3 {
+  font-size: 2.2rem;
+  color: var(--clr-primary);
+  margin-bottom: 1.25rem;
+}
+
+.gallery-content-box p {
+  font-size: 1.05rem;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.gallery-quote {
+  font-style: italic;
+  color: var(--clr-primary-light);
+  border-left: 2px solid var(--clr-secondary);
+  padding-left: 1.25rem;
+  margin-top: auto;
+  font-size: 0.95rem;
+}
+
+/* 10. DETALHES E DIFERENCIAIS SECTION */
+.details {
+  background-color: var(--clr-bg-primary);
 }
 
 .details-wrapper {
@@ -675,7 +675,7 @@ h1, h2, h3, h4 {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   z-index: 3;
-  border: 6px solid var(--clr-bg-secondary);
+  border: 6px solid var(--clr-bg-primary);
 }
 
 .details-img-primary img {
@@ -722,7 +722,7 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
-/* 10. PARA QUEM É SECTION */
+/* 11. PARA QUEM É SECTION */
 .audience {
   background-color: var(--clr-bg-primary);
 }
@@ -774,7 +774,7 @@ h1, h2, h3, h4 {
   line-height: 1.7;
 }
 
-/* 11. COMO FUNCIONA / OCASIÕES */
+/* 12. COMO FUNCIONA / OCASIÕES */
 .how-it-works {
   background-color: var(--clr-bg-secondary);
 }
@@ -843,7 +843,7 @@ h1, h2, h3, h4 {
   max-width: 280px;
 }
 
-/* 12. PROVA SOCIAL SECTION */
+/* 13. PROVA SOCIAL SECTION */
 .social-proof {
   background-color: var(--clr-bg-primary);
 }
@@ -951,7 +951,7 @@ h1, h2, h3, h4 {
   fill: var(--clr-secondary-dark);
 }
 
-/* 13. PERGUNTAS FREQUENTES (FAQ) */
+/* 14. PERGUNTAS FREQUENTES (FAQ) */
 .faq {
   background-color: var(--clr-bg-secondary);
 }
@@ -1046,7 +1046,7 @@ h1, h2, h3, h4 {
   line-height: 1.7;
 }
 
-/* 14. CTA FINAL SECTION */
+/* 15. CTA FINAL SECTION */
 .cta-final {
   background-color: var(--clr-primary);
   color: var(--clr-bg-primary);
@@ -1096,7 +1096,7 @@ h1, h2, h3, h4 {
   color: rgba(250, 249, 246, 0.8);
 }
 
-/* 15. RODAPÉ (FOOTER) */
+/* 16. RODAPÉ (FOOTER) */
 .footer {
   background-color: var(--clr-bg-primary);
   border-top: 1px solid rgba(46, 59, 50, 0.06);
